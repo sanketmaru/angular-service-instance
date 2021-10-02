@@ -14,6 +14,6 @@ export class AppComponent {
     this.router.navigate(['user']);
   }
   onAccountClick() {
-    this.router.navigate(['user']);
+    this.router.navigate(['account']);
   }
 }

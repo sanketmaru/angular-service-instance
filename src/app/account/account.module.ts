@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AccountComponent } from './account.component';
+import { AccountRoutingModule } from './account-routing.module';
+import { ToastModule } from '../toast/toast.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AccountComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    AccountRoutingModule,
+    ToastModule
   ]
 })
 export class AccountModule { }
