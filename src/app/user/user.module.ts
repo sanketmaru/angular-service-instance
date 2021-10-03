@@ -13,6 +13,7 @@ import { ToastModule } from '../toast/toast.module';
     CommonModule,
     UserRoutingModule,
     ToastModule
-  ]
+  ],
+  exports: [ToastModule]
 })
 export class UserModule { }

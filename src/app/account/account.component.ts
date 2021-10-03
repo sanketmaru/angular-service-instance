@@ -7,12 +7,16 @@ import { ToastService } from '../toast/toast.service';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent {
-
   value = "service-types";
-  constructor(private toastService: ToastService) { }
+  messageCount: number = 0;
+  constructor(private toastService: ToastService) {
+    this.messageCount = this.toastService.getMessageCount();
+  }
 
   onClick() {
     this.toastService.create(this.value);
+    this.toastService.increaseMessagCount();
+    this.messageCount = this.toastService.getMessageCount();
   }
 
 }

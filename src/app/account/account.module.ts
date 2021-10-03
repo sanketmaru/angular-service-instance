@@ -14,6 +14,7 @@ import { ToastModule } from '../toast/toast.module';
     CommonModule,
     AccountRoutingModule,
     ToastModule
-  ]
+  ],
+  exports: [ToastModule]
 })
 export class AccountModule { }
