@@ -4,7 +4,8 @@ import { ToastService } from '../toast/toast.service';
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.scss']
+  styleUrls: ['./account.component.scss'],
+  // providers: [ToastService]
 })
 export class AccountComponent {
   value = "service-types";

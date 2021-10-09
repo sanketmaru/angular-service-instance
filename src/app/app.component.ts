@@ -9,11 +9,17 @@ import { ToastService } from './toast/toast.service';
 })
 export class AppComponent {
   value = "service-types";
-  constructor(private router: Router) { }
+  messageCount: number = 0;
+  constructor(private router: Router, private toastService: ToastService) { }
   onUserClick() {
     this.router.navigate(['user']);
   }
   onAccountClick() {
     this.router.navigate(['account']);
+  }
+  onAppClick() {
+    this.toastService.create(this.value);
+    this.toastService.increaseMessagCount();
+    this.messageCount = this.toastService.getMessageCount();
   }
 }

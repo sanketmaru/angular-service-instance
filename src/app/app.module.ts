@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToastModule } from './toast/toast.module';
-import { UserModule } from './user/user.module';
+import { ToastService } from './toast/toast.service';
 
 @NgModule({
   declarations: [
@@ -12,10 +12,10 @@ import { UserModule } from './user/user.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    // ToastModule
+    AppRoutingModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
